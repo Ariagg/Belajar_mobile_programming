@@ -78,52 +78,6 @@ class _PegawaiDetailState extends State<PegawaiDetail> {
           );
         },
       ),
-      // Column(
-      //   children: [
-      //     SizedBox(height: 20),
-      //     Text(
-      //       "Nomor Induk Pegawai : ${widget.pegawai.nip}",
-      //       style: const TextStyle(fontSize: 20),
-      //     ),
-      //     Text(
-      //       "Nama Pegawai : ${widget.pegawai.namaPegawai}",
-      //       style: const TextStyle(fontSize: 20),
-      //     ),
-      //     Text(
-      //       "Tanggal Lahir : ${widget.pegawai.tanggalLahir}",
-      //       style: const TextStyle(fontSize: 20),
-      //     ),
-      //     Text(
-      //       "Nomor Telepon : ${widget.pegawai.nomorTelepon}",
-      //       style: const TextStyle(fontSize: 20),
-      //     ),
-      //     Text(
-      //       "E-mail : ${widget.pegawai.email}",
-      //       style: const TextStyle(fontSize: 20),
-      //     ),
-      //     Text(
-      //       "Password : ${widget.pegawai.password}",
-      //       style: const TextStyle(fontSize: 20),
-      //     ),
-      //     SizedBox(height: 20),
-      //     Row(
-      //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      //       children: [
-      //         _tombolUbah(),
-      //         _tombolHapus(),
-      //         // ElevatedButton(
-      //         //     onPressed: () {},
-      //         //     style:
-      //         //         ElevatedButton.styleFrom(backgroundColor: Colors.green),
-      //         //     child: const Text("Ubah")),
-      //         // ElevatedButton(
-      //         //     onPressed: () {},
-      //         //     style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
-      //         //     child: const Text("Hapus")),
-      //       ],
-      //     )
-      //   ],
-      // ),
     );
   }
 
@@ -138,19 +92,8 @@ class _PegawaiDetailState extends State<PegawaiDetail> {
                       builder: (context) =>
                           PegawaiUpdateForm(pegawai: snapshot.data)));
             },
-            style: ElevatedButton.styleFrom(primary: Colors.green),
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
             child: const Text("Ubah")));
-
-    // ElevatedButton(
-    //     onPressed: () {
-    //       Navigator.push(
-    //           context, //mengkoneksikan tombol  ubah dengan pegawai update form/form ubah pegawai
-    //           MaterialPageRoute(
-    //               builder: (context) =>
-    //                   PegawaiUpdateForm(pegawai: widget.pegawai)));
-    //     },
-    //     style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
-    //child: const Text("Ubah"));
   }
 
   _tombolHapus() {
@@ -175,7 +118,8 @@ class _PegawaiDetailState extends State<PegawaiDetail> {
                           });
                         },
                         child: const Text("YA"),
-                        style: ElevatedButton.styleFrom(primary: Colors.red),
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.red),
                       )),
               //Tombol batal
               ElevatedButton(
